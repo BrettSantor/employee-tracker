@@ -17,7 +17,7 @@ const db = mysql.createConnection({
     database: 'employee_db'
   });
 
-  //todo call function to inquirer
+
   function startUp(){
   inquirer
     .prompt([
