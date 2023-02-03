@@ -16,3 +16,5 @@ const miniRole = require('express').Router();
       function upRole(){
         //prompted to select an employee to update to new role
       }
+
+      module.exports = miniRole;

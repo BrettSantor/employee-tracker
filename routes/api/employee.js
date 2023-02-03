@@ -10,3 +10,5 @@ const miniEmp = require('express').Router();
    function addEmpl(){
     //! prompted employees first namne, last name, role and manager then added to the database
   }
+
+  module.exports = miniEmp;

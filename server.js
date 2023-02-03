@@ -3,14 +3,14 @@ const inquirer = require('inquirer');
 const express = require('express');
 const app = express();
 const mysql = require('mysql2');
- const routes = require('./routes');
+ const routes = require('./routes/index');
 
 
 const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
- app.use(routes);
+ app.use('/api', routes);
 
 const db = mysql.createConnection({
     host: 'localhost',
