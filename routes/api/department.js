@@ -1,12 +1,13 @@
  const miniDept = require('express').Router();
- 
+ const db = require('../../server')
  
  //? view all departments
  function viewDepts (){
     //* shows formatted table of department names and id
-    miniDept.get('/', (req, res) => {
-      readFromFile()
-    })
+    db.query('SELECT * FROM department', function (err, results) {
+      console.log(results);
+    }
+    )
   }
 
   //? add department

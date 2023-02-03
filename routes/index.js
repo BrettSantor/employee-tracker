@@ -9,8 +9,8 @@ const miniApp = require('express').Router();
    miniApp.use('/role', roleRouter);
    miniApp.use('/employee', empRouter);
 
-// miniApp.use((req, res) => {
-//     res.status(404).end();
-//   });
+ miniApp.use((req, res) => {
+    res.status(404).end();
+   });
 
 module.exports = miniApp;
